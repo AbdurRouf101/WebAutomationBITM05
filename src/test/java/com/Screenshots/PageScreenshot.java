@@ -13,25 +13,24 @@ import org.testng.annotations.Test;
 import com.Base.BaseClass;
 
 
-public class PageScreenshot extends BaseClass  {
+public class PageScreenshot extends BaseClass {
 	
-	@BeforeTest
-	public void config() {
-		launchChrome();
-		openHomePage();
-	}
-
-
-	@Test
-	public void Screenshot() throws IOException {
-		File srcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+  @BeforeTest 
+  public void config() {
+	  launchChrome();
+	  openHomePage(); 
+  }
+	
+  @Test
+  public void generateScreenshot () throws IOException {
+	    File srcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);			
 		FileUtils.copyFile(srcFile, new File(System.getProperty("user.dir")+"\\Screenshots\\Page.png"),true);
 
-	}
-
-	@AfterTest
+  }
+  @AfterTest
 	public void closeTest() {
 		closeBrowser();
 	}
-
+  
+  
 }

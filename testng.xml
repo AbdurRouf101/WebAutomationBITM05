@@ -4,10 +4,9 @@
 
   <test thread-count="5" name="Demo Test">
     <classes>
-      <class name="com.TestNG.RegistrationTestNG"/>         
+      <class name="com.Screenshots.PageScreenshot"/>         
     </classes>
   </test> <!-- Test -->
   
-  
-  
+   
 </suite> <!-- Suite -->
