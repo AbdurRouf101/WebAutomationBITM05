@@ -1,11 +1,7 @@
 package com.Screenshots;
 
-import java.io.File;
 import java.io.IOException;
 
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -23,10 +19,16 @@ public class PageScreenshot extends BaseClass {
 	
   @Test
   public void generateScreenshot () throws IOException {
-	    File srcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);			
-		FileUtils.copyFile(srcFile, new File(System.getProperty("user.dir")+"\\Screenshots\\Page.png"),true);
-
+	  generateScreenshot(driver,"New Image");
+	  generateScreenshot(driver,"New Image2");
   }
+  
+  @Test
+  public void generateScreenshot2 () throws IOException {
+	  generateScreenshot(driver,"New Image3");
+	    }  
+  
+  
   @AfterTest
 	public void closeTest() {
 		closeBrowser();

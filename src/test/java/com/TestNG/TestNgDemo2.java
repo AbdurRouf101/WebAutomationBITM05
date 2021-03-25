@@ -6,6 +6,7 @@ public class TestNgDemo2 {
 	
   @Test
   public void Demo4() {
+	  	
 		System.out.println("Demo4 Method Executed");
   }
   
